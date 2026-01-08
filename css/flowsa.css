@@ -1,0 +1,15 @@
+html {
+    --black: #111111;
+    --white: #f4f4f4;
+}
+
+@font-face {
+    font-family: Lexend;
+    src: url(../fonts/Lexend-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: var(--black);
+    font-family: Lexend;
+    color: var(--white);
+}
