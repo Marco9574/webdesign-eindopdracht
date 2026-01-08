@@ -7,11 +7,15 @@ html {
     --H1fontsize: 40px;
     --H2fontsize: 24px;
     --H3fontsize: 20px;
-    --Pfontsize: 15px;
+    --Pfontsize: 16px;
+    --labelfontsize: 17px;
     --btnfontsize: 20px;
+
+    --inputfieldheight: 2em;
 
     --Ppadding: 1em;
     --sectiongap: 0.5em;
+    --inputgap: 0.4em;
 }
 
 @font-face {
@@ -44,8 +48,13 @@ h3 {
     font-size: var(--H3fontsize);
 }
 
-p, span {
+p, span, summary, a {
     font-size: var(--Pfontsize);
+}
+
+main label, footer label {
+    font-weight: 500;
+    font-size: var(--labelfontsize);
 }
 
 body {
@@ -67,6 +76,10 @@ nav {
     width: 100%;
     background-color: var(--black);
     align-items: center;
+}
+
+.desktop-nav-links {
+    display: none;
 }
 
 .dropdown-label img {
@@ -94,7 +107,7 @@ nav {
     background-color: var(--black);
     list-style: none;
     padding: 0;
-    margin: 4.2em 0 0 0;
+    margin: 4.1em 0 0 0;
 }
 
 .dropdown-menu a {
@@ -132,6 +145,8 @@ header {
 
 .page-header {
     text-align: center;
+    background-color: #898989;
+    padding: 2em 0;
 }
 
 header p {
@@ -152,7 +167,7 @@ main {
     padding: 2em var(--padding);
 }
 
-.section1-home, .section-home-features, .section-reviews, .section-end-home, .features-feature-section {
+.section1-home, .section-home-features, .section-reviews, .section-end-home, .features-feature-section, .ondersteuning-faq-section, .ondersteuning-contact-section {
     margin-bottom: 4em;
     display: flex;
     flex-direction: column;
@@ -280,17 +295,56 @@ main {
 
 
 
-.page-header {
-    background-color: #898989;
-    padding: 2em 0;
+
+
+
+
+
+
+
+.ondersteuning-faq-section {
+    gap: 1.5em;
 }
 
+.ondersteuning-faq-section details p {
+    padding: var(--Ppadding) 0;
+}
 
+hr {
+    width: 100%;
+}
 
+.ondersteuning-contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
 
+.ondersteuning-contact-form form input, .ondersteuning-contact-form form select {
+    height: var(--inputfieldheight);
+}
 
+#bericht {
+    height: calc(var(--inputfieldheight) * 2);
+}
 
+.ondersteuning-contact-form form div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--inputgap);
+}
 
+.ondersteuning-contact-section .submit-input input {
+    all: unset;
+    text-decoration: none;
+    color: var(--black);
+    background-color: var(--white);
+    text-align: center;
+    padding: 0.6em 2em;
+    border-radius: 0.2em;
+    font-weight: 600;
+    font-size: var(--btnfontsize);
+}
 
 
 
@@ -338,16 +392,16 @@ footer {
     border-radius: 0.2em;
     font-weight: 600;
     font-size: var(--btnfontsize);
-
 }
 
 .footer-newsletter-email-input {
     display: flex;
     flex-direction: column;
+    gap: var(--inputgap);
 }
 
 .footer-newsletter-email-input input {
-    height: 2em;
+    height: var(--inputfieldheight);
 }
 
 footer a {
@@ -381,4 +435,84 @@ footer a {
 
 .footer-copyright {
     text-align: center;
+}
+
+
+
+
+
+@media (min-width: 700px) {
+    html {
+        --padding: 2.5em;
+
+        --H1fontsize: 64px;
+        --H2fontsize: 32px;
+        --H3fontsize: 24px;
+        --Pfontsize: 18px;
+        --labelfontsize: 20px;
+        --btnfontsize: 28px;
+
+        --inputfieldheight: 3em;
+
+        --Ppadding: 1em;
+        --sectiongap: 0.5em;
+        --inputgap: 0.4em;
+    }
+
+    .home-hero {
+        padding: 8em 9em 8em var(--padding);
+    }
+
+    .page-header {
+        padding: 4em 0;
+    }
+
+    .section1-home {
+        flex-direction: row;
+    }
+
+    .footer-links {
+        flex-direction: row;
+    }
+
+    .footer-links div {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1000px) {
+    html {
+        --padding: 5em;
+
+        --H1fontsize: 72px;
+        --H2fontsize: 40px;
+        --H3fontsize: 24px;
+        --Pfontsize: 20px;
+        --labelfontsize: 20px;
+        --btnfontsize: 28px;
+
+        --inputfieldheight: 3em;
+
+        --Ppadding: 1em;
+        --sectiongap: 0.5em;
+        --inputgap: 0.4em;
+    }
+
+    .desktop-nav-links {
+        display: flex;
+        gap: 5em;
+    }
+
+    .desktop-nav-links a {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .home-hero {
+        padding: 10em 24em 10em var(--padding);
+    }
 }
