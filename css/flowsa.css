@@ -335,6 +335,7 @@ input[type="text"], select, textarea {
 .ondersteuning-faq-section summary {
     cursor: pointer;
     position: relative;
+    z-index: -99;
 }
 
 .ondersteuning-faq-section summary::marker {
