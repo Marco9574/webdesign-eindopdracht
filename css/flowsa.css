@@ -108,7 +108,7 @@ nav {
     top: 0;
     background-color: var(--black);
     list-style: none;
-    padding: 0;
+    padding: 1em var(--padding);
     margin: 4.1em 0 0 0;
 }
 
@@ -169,6 +169,12 @@ main {
     padding: 2em var(--padding);
 }
 
+input[type="text"], select, textarea {
+    font-size: var(--Pfontsize);
+    color: var(--black);
+    font-family: Lexend;
+}
+
 .section1-home, .section-home-features, .section-reviews, .section-end-home, .features-feature-section, .ondersteuning-faq-section, .ondersteuning-contact-section {
     margin-bottom: 4em;
     display: flex;
@@ -176,9 +182,6 @@ main {
     gap: var(--sectiongap);
 }
 
-/*main p {
-    padding: var(--Ppadding) 0;
-}*/
 
 
 
@@ -321,6 +324,41 @@ main {
     padding: var(--Ppadding) 0;
 }
 
+.ondersteuning-faq-section details {
+    padding-bottom: 1.2em;
+}
+
+.ondersteuning-faq-section details:not(:last-child) {
+    border-bottom: 1px solid var(--white);
+}
+
+.ondersteuning-faq-section summary {
+    cursor: pointer;
+    position: relative;
+}
+
+.ondersteuning-faq-section summary::marker {
+    content: none;
+}
+
+.ondersteuning-faq-section summary::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    width: 1.2em;
+    height: 1.2em;
+    background-image: url('../images/icon-chevron-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.ondersteuning-faq-section details[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
 hr {
     width: 100%;
 }
@@ -347,6 +385,7 @@ hr {
 
 .ondersteuning-contact-section .submit-input input {
     all: unset;
+    cursor: pointer;
     text-decoration: none;
     color: var(--black);
     background-color: var(--white);
@@ -394,6 +433,7 @@ footer {
 
 .footer-newsletter-submit-input input {
     all: unset;
+    cursor: pointer;
     text-decoration: none;
     color: var(--black);
     background-color: var(--white);
@@ -402,6 +442,8 @@ footer {
     border-radius: 0.2em;
     font-weight: 600;
     font-size: var(--btnfontsize);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-newsletter-email-input {
@@ -445,6 +487,10 @@ footer a {
 
 .footer-copyright {
     text-align: center;
+}
+
+.hero-cta:hover, .features-btn:hover, .section-end-home-cta:hover, .ondersteuning-contact-section .submit-input input:hover, .footer-newsletter-submit-input input:hover {
+    background-color: #cfcfcf;
 }
 
 
@@ -514,6 +560,10 @@ footer a {
 
     .footer-newsletter {
         width: 60%;
+    }
+
+    .footer-newsletter-submit-input input {
+        width: auto;
     }
 
     .footer-links {

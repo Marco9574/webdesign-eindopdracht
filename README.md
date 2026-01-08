@@ -13,11 +13,11 @@
 - [V] Gebruik ik **semantische tags** (header, nav, main, section, footer)?
 - [V] Heb ik een **titel** en **meta-tags** in `<head>` (charset, viewport)?
 - [V] Zijn alle links in de **navigatie** correct en werken ze?
-- [ ] Heb ik **alt-teksten** toegevoegd aan alle afbeeldingen?
+- [V] Heb ik **alt-teksten** toegevoegd aan alle afbeeldingen?
 - [ ] Is mijn HTML **gevalideerd via [W3C Validator](https://validator.w3.org/aat alle styling in **style.css** (geen inline CSS)?
 - [V] Volg ik mijn **Figma-ontwerp** qua kleuren en typografie?
 - [V] Gebruik ik **Google Fonts** (indien nodig)?
-- [ ] Heb ik **hover-effecten** op knoppen of menu-items?
+- [V] Heb ik **hover-effecten** op knoppen of menu-items?
 
 ---
 
@@ -30,7 +30,7 @@
 
 ## 5. Afbeeldingen
 - [ ] Zijn afbeeldingen **geoptimaliseerd** (niet te groot)?
-- [ ] Heb ik correcte **bestandsnamen** (geen spaties, kleine letters)?
+- [V] Heb ik correcte **bestandsnamen** (geen spaties, kleine letters)?
 
 ---
 
