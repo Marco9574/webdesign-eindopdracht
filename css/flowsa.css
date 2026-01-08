@@ -554,7 +554,7 @@ footer a {
         flex-direction: column;
     }
 
-    #features-feature-section-content-left {
+    .features-feature-section-content-left {
         order: -1;
     }
 
