@@ -121,7 +121,7 @@ nav {
 
 header {
     margin-top: 4em;
-    background-image: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0)), url(../images/hero-img.jpg);
+    background-image: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 1)), url(../images/hero-img.jpg);
     background-size: cover;
     background-position: center;
     padding: 8em var(--padding);
