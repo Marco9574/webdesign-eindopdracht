@@ -74,8 +74,10 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+    box-sizing: border-box;
     background-color: var(--black);
     align-items: center;
+    padding: 0 var(--padding);
 }
 
 .desktop-nav-links {
@@ -210,6 +212,9 @@ main {
     align-items: center;
     background-color: var(--white);
     margin: 0;
+    border-radius: 0.6em;
+    overflow: hidden;
+    min-width: 15em;
 }
 
 .features-carousel h3 {
@@ -236,32 +241,38 @@ main {
 
 
 
-.reviews-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
+
 
 .allreviews {
-    display: flex;
+    display: grid;
+    gap: 1em;
     overflow-x: auto;
     overflow-y: hidden;
+    align-items: start;
+
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
 }
 
 .review {
     display: flex;
     gap: 1em;
+    align-items: flex-start;
 }
 
 .review div {
     display: flex;
     flex-direction: column;
     gap: 0.3em;
-    width: 11em;
+    width: 14em;
 }
 
 .review span {
     font-weight: 600;
+}
+
+.review img {
+    width: 4em;
 }
 
 
@@ -362,12 +373,11 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 3em;
-    justify-content: left;
 }
 
 .footer-logo {
     height: 4em;
-    
+    align-self: flex-start;
 }
 
 .footer-newsletter {
@@ -469,6 +479,41 @@ footer a {
 
     .section1-home {
         flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .features-btn {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .section-end-home-cta {
+        width: 40%;
+    }
+
+    .review div {
+        width: 20em;
+    }
+
+    .review img {
+        width: 5em;
+    }
+
+    .features-feature-section {
+        flex-direction: row;
+    }
+
+    .features-feature-section-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #features-feature-section-content-left {
+        order: -1;
+    }
+
+    .footer-newsletter {
+        width: 60%;
     }
 
     .footer-links {
@@ -494,8 +539,12 @@ footer a {
         --inputfieldheight: 3em;
 
         --Ppadding: 1em;
-        --sectiongap: 0.5em;
+        --sectiongap: 1.5em;
         --inputgap: 0.4em;
+    }
+
+    main {
+        padding: 2em calc(var(--padding) * 2);
     }
 
     .desktop-nav-links {
@@ -513,6 +562,33 @@ footer a {
     }
 
     .home-hero {
-        padding: 10em 24em 10em var(--padding);
+        padding: 10em 35% 10em var(--padding);
+    }
+
+    .review img {
+        width: 4em;
+    }
+
+    .footer-newsletter {
+        width: 40%;
+    }
+
+    .allreviews {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .review {
+        min-width: 0;
+    }
+
+    .section-home-features {
+        text-align: center;
+    }
+
+    .features-carousel {
+        justify-content: center;
     }
 }
