@@ -121,10 +121,17 @@ nav {
 
 header {
     margin-top: 4em;
+}
+
+.home-hero {
     background-image: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 1)), url(../images/hero-img.jpg);
     background-size: cover;
     background-position: center;
     padding: 8em var(--padding);
+}
+
+.page-header {
+    text-align: center;
 }
 
 header p {
@@ -145,8 +152,11 @@ main {
     padding: 2em var(--padding);
 }
 
-.section1-home, .section-features, .section-reviews {
+.section1-home, .section-home-features, .section-reviews, .section-end-home, .features-feature-section {
     margin-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sectiongap);
 }
 
 /*main p {
@@ -162,13 +172,7 @@ main {
     width: 100%;
 }
 
-.section1-home {
-    display: flex;
-    flex-direction: column;
-    gap: var(--sectiongap);
-}
-
-.section-features {
+.section-home-features {
     display: flex;
     flex-direction: column;
     gap: var(--sectiongap);
@@ -215,11 +219,7 @@ main {
 
 
 
-.section-reviews {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
+
 
 .reviews-column {
     display: flex;
@@ -254,11 +254,7 @@ main {
 
 
 
-.section-end-home {
-    display: flex;
-    flex-direction: column;
-    gap: var(--sectiongap);
-}
+
 .section-end-home-cta {
     text-decoration: none;
     color: var(--black);
@@ -269,6 +265,37 @@ main {
     font-weight: 600;
     font-size: var(--btnfontsize);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-header {
+    background-color: #898989;
+    padding: 2em 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -311,7 +338,7 @@ footer {
     border-radius: 0.2em;
     font-weight: 600;
     font-size: var(--btnfontsize);
-    width: 100%;
+
 }
 
 .footer-newsletter-email-input {
