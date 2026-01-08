@@ -1,6 +1,13 @@
 html {
     --black: #111111;
     --white: #f4f4f4;
+
+    --padding: 1em;
+
+    --H1fontsize: 40px;
+    --H2fontsize: 24px;
+    --H3fontsize: 20px;
+    --Pfontsize: 15px;
 }
 
 @font-face {
@@ -8,8 +15,51 @@ html {
     src: url(../fonts/Lexend-VariableFont_wght.ttf);
 }
 
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+h1, h2 {
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: var(--H1fontsize);
+}
+
+h2 {
+    font-size: var(--H2fontsize);
+}
+
+h3 {
+    font-size: var(--H3fontsize);
+}
+
+p, span {
+    font-size: var(--Pfontsize);
+}
+
 body {
     background-color: var(--black);
     font-family: Lexend;
     color: var(--white);
+    margin: 0;
+}
+
+.logo {
+    height: 4em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header {
+    margin-top: 4em;
+    background-image: url(../images/hero-img.jpg);
+    background-size: 100%;
 }
